@@ -1,0 +1,32 @@
+/* Scroll-reveal animation states for [data-animate] elements.
+   js/components/figure.js adds body.has-figure-animations at init (so nothing
+   is hidden when JS is unavailable) and .is-revealed when an element scrolls
+   into view. Variants: data-animate="fade-up" (default), "fade", "zoom".
+   Stagger with data-animate-delay="<ms>". */
+
+body.has-figure-animations [data-animate] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+body.has-figure-animations [data-animate="fade"] {
+  transform: none;
+}
+
+body.has-figure-animations [data-animate="zoom"] {
+  transform: scale(0.94);
+}
+
+body.has-figure-animations [data-animate].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.has-figure-animations [data-animate] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

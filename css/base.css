@@ -1,0 +1,115 @@
+/* Page chrome: body, main card, headings, code, tables, misc elements. */
+
+body {
+  background-color: #adadad;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.3;
+}
+
+main {
+  background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.18)), #f7f3ec;
+  hyphens: auto;
+  padding: 20px; /* You might want some padding around your content */
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+  margin-left:20px;margin-right:20px;line-height:23px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.home-content li {
+  list-style-position: outside;
+}
+
+.home-content li::marker {
+  font-size: 1em;
+  margin-right: 1em;
+}
+
+.article-meta a {
+  text-decoration: none;
+  background: #eee;
+  padding: 5px;
+  border-radius: 5px;
+}
+.article-meta { text-align: center; }
+.title {
+  font-family: 'Optima';
+  font-size: 1em;
+  line-height: normal;
+  text-align: center;
+  font-variant: small-caps;
+}
+hr {
+  border-style: dashed;
+  color: #ddd;
+}
+
+/* code */
+pre {
+  border: 1px solid #000000;
+  box-shadow: 5px 5px 5px #cacaca;
+  padding: 0.5em;
+  overflow-x: auto;
+  margin-right: 100pt;
+  margin-left: 100pt;
+  line-height: 18px;
+  padding-bottom: 0px;
+}
+code { background: #f9f9f9; }
+pre code { background: none; }
+
+/* misc elements */
+img, iframe, video { max-width: 100%; }
+
+blockquote {
+  background: #f9f9f9;
+  padding: 3px 1em 3px;
+  border-radius: 8px; /* Optional: if you want rounded corners */
+}
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+table thead th { border-bottom: 1px solid #ddd; }
+
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee; }
+
+h2, h3 {
+  font-family: 'Optima';
+  text-align: left;
+  border-bottom: 2px solid #000;  /* adjust the color and thickness as desired */
+  padding-bottom: 0px;  /* adds some space between the text and the line */
+  margin-bottom: 4px;  /* adds some space after the line */
+  font-variant: small-caps;
+  font-size: 1.4em;
+}
+
+h4, h5, h6 {
+    font-family: 'Optima';
+    text-align: left;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-variant: small-caps;
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    display: inline-block;
+    width: auto;
+    font-size: 1em;
+  }
+
+  h4:after, h5:after, h6:after {
+    content: '';
+    display: block;
+    height: 2px; /* same thickness as your h2, h3 line */
+    background-color: #000; /* same color as your h2, h3 line */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }

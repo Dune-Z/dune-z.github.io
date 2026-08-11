@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Starter template for paper-style blog posts">
+    <title>Paper-Style Post Template | Yifei Zuo</title>
+    <link rel="stylesheet" href="/css/style.css?v=20260810b" />
+    <link rel="stylesheet" href="/css/fonts.css?v=20260810b" />
+  </head>
+
+  <body data-page="posts">
+<main class="post">
+<div id="site-header"></div>
+
+<header class="post-header">
+  <h1 class="post-title">Writing Paper-Style Posts on This Site</h1>
+  <div class="post-authors">Yifei Zuo<sup>1</sup></div>
+  <div class="post-affiliations"><sup>1</sup>Northwestern University</div>
+  <div class="post-abstract">
+    <p>
+      This page is both a living demo and the starter template for blog posts.
+      It mimics the typography of my papers: the title, authors, section
+      headings, and <strong>bold text</strong> are set in Latin Modern Sans,
+      while body text keeps the site's serif stack. Sections and figures number
+      themselves, links glide with the same animated highlighter as the
+      homepage, and figures can be revealed on scroll or made fully
+      interactive. To start a new post, copy <code>posts/template/</code> to
+      <code>posts/&lt;your-slug&gt;/</code> and replace the content.
+    </p>
+  </div>
+  <dl class="post-meta">
+    <dt>Date:</dt><dd>August 2026</dd>
+    <dt>Code:</dt><dd><a href="https://github.com/Yifei-Zuo/yifei-zuo.github.io" class="paper-link mono-link" target="_blank" rel="noopener noreferrer">https://github.com/Yifei-Zuo/yifei-zuo.github.io</a></dd>
+  </dl>
+</header>
+
+<h2>Typography</h2>
+<p>
+  Body text stays in the site's serif stack, and <strong>anything bold
+  switches to Latin Modern Sans</strong>, exactly like <code>\textbf</code> in
+  the paper class. Run-in paragraph headings work the same way:
+</p>
+<p>
+  <strong>Links.</strong> Every link flavor rides the shared spring-animated
+  highlighter: <a href="/" class="custom-link">black site links</a>,
+  <a href="https://arxiv.org/pdf/2605.29157" class="paper-link" target="_blank" rel="noopener noreferrer">blue reference links</a> like the citations in the paper,
+  <a href="https://arxiv.org/abs/2605.29157" class="arxiv-link" target="_blank" rel="noopener noreferrer">arXiv-red links</a>, and
+  <a href="https://www.mccormick.northwestern.edu/industrial/" class="northwestern-link" target="_blank" rel="noopener noreferrer">Northwestern purple</a>.
+  Organization names can reuse the homepage's monospace style with
+  <code>class="custom-link mono-link"</code>, e.g.
+  <a href="https://www.tilderesearch.com/" class="custom-link mono-link" target="_blank" rel="noopener noreferrer">Tilde Research</a>.
+</p>
+<p>
+  <strong>Math.</strong> MathJax is loaded on every page, so inline math such
+  as \( \hat{f}(q) = \sum_i w_i(q)\, v_i \) and display math both work:
+  $$ w_i(q) \propto \exp\!\left( -\frac{(x_i - q)^2}{2h^2} \right). $$
+</p>
+
+<h3>Section numbering</h3>
+<p>
+  <code>&lt;h2&gt;</code> and <code>&lt;h3&gt;</code> inside a post are
+  numbered automatically with CSS counters (this one is 1.1). Add
+  <code>class="no-number"</code> for unnumbered headings such as
+  Acknowledgements.
+</p>
+
+<h2>Figures</h2>
+<p>
+  Wrap figures in <code>&lt;figure class="post-figure"&gt;</code> with a
+  <code>&lt;figcaption&gt;</code>; the sans-bold "Figure N:" label is added
+  automatically. Give any element <code>data-animate="fade-up"</code> (or
+  <code>"fade"</code>, <code>"zoom"</code>) to reveal it as it scrolls into
+  view; <code>data-animate-delay="150"</code> staggers the entrance. Users who
+  prefer reduced motion see everything immediately.
+</p>
+
+<figure class="post-figure" data-animate="fade-up">
+  <div class="post-figure__body">
+    <svg viewBox="0 0 640 210" role="img" aria-label="Diagram of the site's modular CSS and JS architecture" style="max-width: 640px; width: 100%; height: auto;">
+      <style>
+        .box { fill: #ffffff; stroke: #000; stroke-width: 1.5; }
+        .mod { fill: #f2f2f5; stroke: #000; stroke-width: 1; }
+        .lbl { font: bold 15px "Latin Modern Sans", sans-serif; fill: #000; }
+        .file { font: 13px "Latin Modern Mono", monospace; fill: #000; }
+        .edge { stroke: #000; stroke-width: 1.2; fill: none; marker-end: url(#arrow); }
+      </style>
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#000"></path>
+        </marker>
+      </defs>
+      <rect class="box" x="40" y="30" width="180" height="44" rx="8"></rect>
+      <text class="lbl" x="130" y="50" text-anchor="middle">style.css</text>
+      <text class="file" x="130" y="66" text-anchor="middle">one link per page</text>
+      <rect class="box" x="40" y="140" width="180" height="44" rx="8"></rect>
+      <text class="lbl" x="130" y="160" text-anchor="middle">site.js</text>
+      <text class="file" x="130" y="176" text-anchor="middle">type="module"</text>
+      <g>
+        <rect class="mod" x="330" y="16" width="120" height="26" rx="6"></rect>
+        <text class="file" x="390" y="33" text-anchor="middle">base.css</text>
+        <rect class="mod" x="330" y="48" width="120" height="26" rx="6"></rect>
+        <text class="file" x="390" y="65" text-anchor="middle">links.css</text>
+        <rect class="mod" x="470" y="16" width="130" height="26" rx="6"></rect>
+        <text class="file" x="535" y="33" text-anchor="middle">post.css</text>
+        <rect class="mod" x="470" y="48" width="130" height="26" rx="6"></rect>
+        <text class="file" x="535" y="65" text-anchor="middle">figures.css</text>
+      </g>
+      <g>
+        <rect class="mod" x="330" y="126" width="120" height="26" rx="6"></rect>
+        <text class="file" x="390" y="143" text-anchor="middle">header.js</text>
+        <rect class="mod" x="330" y="158" width="120" height="26" rx="6"></rect>
+        <text class="file" x="390" y="175" text-anchor="middle">figure.js</text>
+        <rect class="mod" x="470" y="126" width="130" height="26" rx="6"></rect>
+        <text class="file" x="535" y="143" text-anchor="middle">footer.js</text>
+        <rect class="mod" x="470" y="158" width="130" height="26" rx="6"></rect>
+        <text class="file" x="535" y="175" text-anchor="middle">link-highlight.js</text>
+      </g>
+      <path class="edge" d="M 220 52 C 270 52, 280 45, 325 45"></path>
+      <path class="edge" d="M 220 162 C 270 162, 280 155, 325 155"></path>
+    </svg>
+  </div>
+  <figcaption>
+    The modular architecture. Pages keep a single stylesheet link and a single
+    script tag; concerns live in focused modules that the aggregator pulls in.
+    This figure fades up when it enters the viewport.
+  </figcaption>
+</figure>
+
+<h3>Interactive figures</h3>
+<p>
+  For interactive figures, put an inline SVG (or canvas) inside the figure and
+  drive it with a small <code>&lt;script type="module"&gt;</code> at the end of
+  the post. The demo below plots the kernel weights
+  \( w_i(q) \propto \exp(-(x_i - q)^2 / 2h^2) \): move your pointer across the
+  plot to slide the query \( q \), and drag the slider to change the bandwidth
+  \( h \).
+</p>
+
+<figure class="post-figure" data-animate="fade-up" id="kernel-demo">
+  <div class="post-figure__body">
+    <svg id="kernel-svg" viewBox="0 0 640 240" role="img" aria-label="Interactive plot of Gaussian kernel weights over data points" style="max-width: 640px; width: 100%; height: auto; touch-action: none; cursor: crosshair;">
+      <line x1="30" y1="200" x2="610" y2="200" stroke="#000" stroke-width="1.5"></line>
+      <path id="kernel-curve" fill="rgba(43, 108, 176, 0.12)" stroke="#2B6CB0" stroke-width="2"></path>
+      <line id="kernel-query" y1="30" y2="200" stroke="#B22222" stroke-width="1.5" stroke-dasharray="5 4"></line>
+      <g id="kernel-points"></g>
+      <text id="kernel-readout" x="606" y="26" text-anchor="end" style="font: 14px 'Latin Modern Mono', monospace; fill: #000;"></text>
+    </svg>
+  </div>
+  <div class="post-figure__controls">
+    <label for="kernel-bandwidth">bandwidth h</label>
+    <input id="kernel-bandwidth" type="range" min="12" max="140" value="45" step="1">
+  </div>
+  <figcaption>
+    An interactive figure. The dashed red line is the query \( q \) (follows
+    your pointer), the blue curve shows the kernel weight assigned to each
+    location, and each data point scales with its weight.
+  </figcaption>
+</figure>
+
+<h2>Starting a New Post</h2>
+<ol>
+  <li>Copy <code>posts/template/</code> to <code>posts/&lt;your-slug&gt;/</code>.</li>
+  <li>Update the <code>&lt;title&gt;</code>, the header card (title, authors, abstract), and the <code>Date / Code</code> rows.</li>
+  <li>Write sections with <code>&lt;h2&gt;</code>/<code>&lt;h3&gt;</code>; numbering is automatic.</li>
+  <li>Add figures as <code>post-figure</code> blocks; sprinkle <code>data-animate</code> for scroll reveals.</li>
+  <li>Keep per-post interactivity in a <code>&lt;script type="module"&gt;</code> at the bottom of <code>&lt;main&gt;</code>.</li>
+</ol>
+
+<script type="module">
+  // Per-post script: kernel bandwidth demo (Figure 2).
+  var svg = document.getElementById('kernel-svg');
+  var curve = document.getElementById('kernel-curve');
+  var queryLine = document.getElementById('kernel-query');
+  var pointsGroup = document.getElementById('kernel-points');
+  var readout = document.getElementById('kernel-readout');
+  var slider = document.getElementById('kernel-bandwidth');
+
+  var LEFT = 30, RIGHT = 610, BASE = 200, TOP = 40;
+  var xs = [70, 118, 176, 231, 268, 322, 355, 401, 446, 493, 527, 574];
+  var query = 320;
+  var bandwidth = Number(slider.value);
+
+  var points = xs.map(function (x) {
+    var dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    dot.setAttribute('cx', x);
+    dot.setAttribute('cy', BASE);
+    dot.setAttribute('fill', '#000');
+    pointsGroup.appendChild(dot);
+    return { x: x, dot: dot };
+  });
+
+  function weight(x) {
+    var d = (x - query) / bandwidth;
+    return Math.exp(-0.5 * d * d);
+  }
+
+  function render() {
+    var d = 'M ' + LEFT + ' ' + BASE;
+    for (var x = LEFT; x <= RIGHT; x += 4) {
+      d += ' L ' + x + ' ' + (BASE - weight(x) * (BASE - TOP));
+    }
+    d += ' L ' + RIGHT + ' ' + BASE + ' Z';
+    curve.setAttribute('d', d);
+
+    queryLine.setAttribute('x1', query);
+    queryLine.setAttribute('x2', query);
+
+    points.forEach(function (p) {
+      var w = weight(p.x);
+      p.dot.setAttribute('r', (3 + 5 * w).toFixed(2));
+      p.dot.setAttribute('fill-opacity', (0.35 + 0.65 * w).toFixed(3));
+    });
+
+    readout.textContent = 'q = ' + Math.round(query) + ', h = ' + bandwidth;
+  }
+
+  function svgX(event) {
+    var rect = svg.getBoundingClientRect();
+    var x = (event.clientX - rect.left) / rect.width * 640;
+    return Math.min(RIGHT, Math.max(LEFT, x));
+  }
+
+  svg.addEventListener('pointermove', function (event) {
+    query = svgX(event);
+    render();
+  });
+
+  slider.addEventListener('input', function () {
+    bandwidth = Number(slider.value);
+    render();
+  });
+
+  render();
+</script>
+</main>
+
+<footer id="site-footer"></footer>
+<script type="module" src="/js/site.js?v=20260810b"></script>
+  </body>
+</html>

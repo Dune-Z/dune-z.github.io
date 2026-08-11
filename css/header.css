@@ -1,0 +1,41 @@
+/* Site header, nav, and footer (rendered by js/components/header.js and footer.js). */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.site-header__brand {
+  font-weight: bold;
+  font-size: 28px;
+  font-family: "EB Garamond";
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  font-weight: normal;
+  font-family: "Latin Modern Mono";
+  font-size: 18px;
+}
+
+.site-footer__email {
+  font-family: "Latin Modern Mono";
+}
+
+.menu { padding: 0; }
+.menu li { display: inline-block; }
+.menu a {
+  text-decoration: none;
+  /* background: #eee; */
+  padding: 10px;
+  /* border-radius: 5px; */
+}
+.menu { text-align: left; }
+footer { text-align: center; }
+footer a { text-decoration: none; }

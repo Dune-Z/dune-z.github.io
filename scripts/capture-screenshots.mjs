@@ -8,10 +8,10 @@ const outputDir = path.resolve(process.cwd(), '.screenshots');
 
 const pages = [
   { name: 'home', path: '/' },
-  { name: 'projects', path: '/projects/' },
   { name: 'categories', path: '/categories/' },
   { name: 'tags', path: '/tags/' },
-  { name: 'legacy-posts', path: '/posts/' },
+  { name: 'posts', path: '/posts/' },
+  { name: 'post-template', path: '/posts/template/' },
   { name: 'not-found', path: '/404.html' }
 ];
 

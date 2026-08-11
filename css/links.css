@@ -1,0 +1,170 @@
+/* Every link flavor + the floating link-highlight pill.
+   To add a new animated link flavor: define it here (set --link-highlight /
+   --link-highlight-text), add it to the body.has-link-highlight groups below,
+   and register it in ANIMATED_LINK_SELECTOR (js/components/link-highlight.js). */
+
+.custom-link {
+  --link-highlight: #000000;
+  --link-highlight-text: #ffffff;
+  color: black;
+  text-decoration: underline;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-link:hover,
+.custom-link.is-hovered,
+.custom-link:focus-visible {
+  color: white;
+  background-color: black;
+}
+
+.topic-link {
+  font-family: "Latin Modern Mono";
+  font-size: 0.95em;
+  font-weight: bold;
+}
+
+/* Monospace link utilities (organizations, people). */
+.mono-link {
+  font-family: "Latin Modern Mono";
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.mono-link--95 {
+  font-size: 0.95em;
+}
+
+.material-link {
+  color: blue;
+  text-decoration: underline;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.material-link:hover {
+  color: white;
+  background-color: blue;
+}
+
+.northwestern-link {
+  --link-highlight: #4E2A84;
+  --link-highlight-text: #ffffff;
+  color: #4E2A84;
+  font-family: "Latin Modern Mono";
+  font-size: 0.95em;
+  text-decoration: underline;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.northwestern-link:hover,
+.northwestern-link.is-hovered,
+.northwestern-link:focus-visible {
+  color: white;
+  background-color: #4E2A84;
+}
+
+.arxiv-link {
+  --link-highlight: #B22222;
+  --link-highlight-text: #ffffff;
+  color: #B22222;
+  text-decoration: underline;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.arxiv-link:hover,
+.arxiv-link.is-hovered,
+.arxiv-link:focus-visible {
+  color: white;
+  background-color: #B22222;
+}
+
+/* Blue reference-style link used in paper-style posts (mimics arXiv paper links). */
+.paper-link {
+  --link-highlight: #2B6CB0;
+  --link-highlight-text: #ffffff;
+  color: #2B6CB0;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.paper-link:hover,
+.paper-link.is-hovered,
+.paper-link:focus-visible {
+  color: white;
+  background-color: #2B6CB0;
+}
+
+.custom-link,
+.northwestern-link,
+.arxiv-link,
+.paper-link {
+  position: relative;
+  z-index: 2;
+}
+
+.link-highlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  border-radius: 2px;
+  background-color: #000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  z-index: 1;
+  will-change: transform, width, height, background-color, opacity;
+}
+
+.link-highlight.is-visible {
+  opacity: 1;
+}
+
+body.has-link-highlight .custom-link:hover,
+body.has-link-highlight .custom-link.is-hovered,
+body.has-link-highlight .custom-link:focus-visible,
+body.has-link-highlight .northwestern-link:hover,
+body.has-link-highlight .northwestern-link.is-hovered,
+body.has-link-highlight .northwestern-link:focus-visible,
+body.has-link-highlight .arxiv-link:hover,
+body.has-link-highlight .arxiv-link.is-hovered,
+body.has-link-highlight .arxiv-link:focus-visible,
+body.has-link-highlight .paper-link:hover,
+body.has-link-highlight .paper-link.is-hovered,
+body.has-link-highlight .paper-link:focus-visible {
+  background-color: transparent;
+}
+
+body.has-link-highlight .custom-link:hover,
+body.has-link-highlight .custom-link.is-hovered,
+body.has-link-highlight .custom-link:focus-visible,
+body.has-link-highlight .custom-link.is-active {
+  color: black;
+  background-color: transparent;
+}
+
+body.has-link-highlight .northwestern-link:hover,
+body.has-link-highlight .northwestern-link.is-hovered,
+body.has-link-highlight .northwestern-link:focus-visible {
+  color: #4E2A84;
+}
+
+body.has-link-highlight .arxiv-link:hover,
+body.has-link-highlight .arxiv-link.is-hovered,
+body.has-link-highlight .arxiv-link:focus-visible {
+  color: #B22222;
+}
+
+body.has-link-highlight .paper-link:hover,
+body.has-link-highlight .paper-link.is-hovered,
+body.has-link-highlight .paper-link:focus-visible {
+  color: #2B6CB0;
+}
+
+body.has-link-highlight .custom-link.is-highlighted,
+body.has-link-highlight .northwestern-link.is-highlighted,
+body.has-link-highlight .arxiv-link.is-highlighted,
+body.has-link-highlight .paper-link.is-highlighted {
+  color: var(--link-highlight-text);
+  background-color: transparent;
+}

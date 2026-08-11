@@ -1,0 +1,75 @@
+/* Floating snapshot card shown when hovering a link
+   (js/components/link-preview.js). */
+
+.link-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  max-width: calc(100vw - 16px);
+  z-index: 10;
+  background: #fffdf8;
+  border: 1px solid #000;
+  border-radius: 6px;
+  box-shadow: 8px 8px 14px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px) scale(0.98);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  will-change: transform, opacity;
+}
+
+.link-preview.is-below {
+  transform: translateY(-6px) scale(0.98);
+}
+
+.link-preview.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.link-preview__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1024 / 640;
+  object-fit: cover;
+  background: #eeeeee;
+  border-bottom: 1px solid #000;
+}
+
+.link-preview__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 6px 10px 7px;
+}
+
+.link-preview__title {
+  font-family: "Latin Modern Sans";
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link-preview__domain {
+  font-family: "Latin Modern Mono";
+  font-size: 12px;
+  color: #555555;
+}
+
+/* No hover, no card (touch devices navigate on tap). */
+@media (hover: none) {
+  .link-preview {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-preview {
+    transition: none;
+  }
+}

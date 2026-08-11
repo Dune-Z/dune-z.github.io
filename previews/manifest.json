@@ -1,0 +1,102 @@
+{
+ "/posts/": {
+  "image": "/previews/posts-c9e6593f.jpg",
+  "title": "Posts | Yifei Zuo",
+  "capturedAt": "2026-08-11T03:47:25.284Z"
+ },
+ "https://www.tilderesearch.com/": {
+  "image": "/previews/www-tilderesearch-com-b8dd6cfd.jpg",
+  "title": "Tilde Research",
+  "capturedAt": "2026-08-11T03:47:27.993Z"
+ },
+ "https://www.together.ai/": {
+  "image": "/previews/www-together-ai-0ab4e8bc.jpg",
+  "title": "Together AI | The AI Native Cloud",
+  "capturedAt": "2026-08-11T03:47:31.434Z"
+ },
+ "https://www.snowflake.com/": {
+  "image": "/previews/www-snowflake-com-401fdf82.jpg",
+  "title": "Snowflake AI Data Cloud",
+  "capturedAt": "2026-08-11T03:47:34.870Z"
+ },
+ "https://www.sensetime.com/": {
+  "image": "/previews/www-sensetime-com-5db888a0.jpg",
+  "title": "SenseTime | SenseNova Multimodal LLM & AI Solutions",
+  "capturedAt": "2026-08-11T03:47:39.368Z"
+ },
+ "https://www.mccormick.northwestern.edu/industrial/": {
+  "image": "/previews/www-mccormick-northwestern-edu-industrial-37d41e03.jpg",
+  "title": "Industrial Engineering & Management Sciences | Northwestern Engineering",
+  "capturedAt": "2026-08-11T03:47:43.010Z"
+ },
+ "https://zhaoranwang.github.io/": {
+  "image": "/previews/zhaoranwang-github-io-cce55b5e.jpg",
+  "title": "Zhaoran Wang, Northwestern University",
+  "capturedAt": "2026-08-11T03:47:45.790Z"
+ },
+ "https://www.csail.mit.edu/": {
+  "image": "/previews/www-csail-mit-edu-0a8d4dbe.jpg",
+  "title": "Home Page | MIT CSAIL",
+  "capturedAt": "2026-08-11T03:47:49.439Z"
+ },
+ "https://www.cs.washington.edu/": {
+  "image": "/previews/www-cs-washington-edu-054030f0.jpg",
+  "title": "Paul G. Allen School of Computer Science & Engineering",
+  "capturedAt": "2026-08-11T03:47:52.547Z"
+ },
+ "https://en.ustc.edu.cn/": {
+  "image": "/previews/en-ustc-edu-cn-57590041.jpg",
+  "title": "University of Science and Technology of China",
+  "capturedAt": "2026-08-11T03:48:09.636Z"
+ },
+ "/posts/template/": {
+  "image": "/previews/posts-template-c84ec139.jpg",
+  "title": "Paper-Style Post Template | Yifei Zuo",
+  "capturedAt": "2026-08-11T03:48:11.891Z"
+ },
+ "https://github.com/Yifei-Zuo/yifei-zuo.github.io": {
+  "image": "/previews/github-com-Yifei-Zuo-yifei-zuo-github-io-c9889037.jpg",
+  "title": "GitHub - Yifei-Zuo/yifei-zuo.github.io · GitHub",
+  "capturedAt": "2026-08-11T03:48:14.907Z"
+ },
+ "/": {
+  "image": "/previews/link-42099b4a.jpg",
+  "title": "Home | Yifei Zuo",
+  "capturedAt": "2026-08-11T03:48:17.143Z"
+ },
+ "https://arxiv.org/abs/2605.29157": {
+  "image": "/previews/arxiv-org-abs-2605-29157-ce869c90.jpg",
+  "title": "[2605.29157] Parallax: Parameterized Local Linear Attention for Language Modeling",
+  "capturedAt": "2026-08-11T03:48:21.740Z"
+ },
+ "https://arxiv.org/pdf/2605.29157": {
+  "image": "/previews/arxiv-org-pdf-2605-29157-48c9f6fa.jpg",
+  "title": "[2605.29157] Parallax: Parameterized Local Linear Attention for Language Modeling",
+  "capturedAt": "2026-08-11T03:48:19.420Z"
+ },
+ "https://www.cs.washington.edu/people/faculty/luis-ceze/": {
+  "image": "/previews/www-cs-washington-edu-people-faculty-luis-ceze-60cf2799.jpg",
+  "title": "Luis Ceze, Professor - Paul G. Allen School of Computer Science & Engineering",
+  "capturedAt": "2026-08-11T03:47:55.343Z"
+ },
+ "https://expye.com/about": {
+  "image": "/previews/expye-com-about-a472df42.jpg",
+  "title": "About Me - Zihao's Vault",
+  "capturedAt": "2026-08-11T03:47:57.860Z"
+ },
+ "https://scholar.google.com/citations?user=fWUxfTEAAAAJ&hl=en&oi=ao": {
+  "image": "/previews/scholar-google-com-citations-user-fWUxfTEAAAAJ-hl-en-oi-ao-b845230e.jpg",
+  "title": "‪Yifei Zuo‬ - ‪Google Scholar‬",
+  "capturedAt": "2026-08-11T03:48:24.835Z"
+ },
+ "https://github.com/Yifei-Zuo": {
+  "image": "/previews/github-com-Yifei-Zuo-85ce009c.jpg",
+  "title": "Yifei-Zuo (Yifei Zuo) · GitHub",
+  "capturedAt": "2026-08-11T03:48:27.904Z"
+ },
+ "https://x.com/YifeiZuoX": {
+  "image": "/previews/x-com-YifeiZuoX-a5e5bc10.jpg",
+  "title": "Yifei Zuo (@YifeiZuoX) / X",
+  "capturedAt": "2026-08-11T03:48:31.838Z"
+ }
+}

@@ -19,6 +19,7 @@ export function initLinkPreviews() {
   var showTimer = 0;
   var hideTimer = 0;
   var currentLink = null; // the link whose card is currently visible
+  var preloader = new Image(); // warms the snapshot during the hover dwell
 
   fetch('/previews/manifest.json')
     .then(function (response) { return response.ok ? response.json() : null; })
@@ -86,7 +87,14 @@ export function initLinkPreviews() {
     ensureCard();
 
     var href = link.getAttribute('href');
-    image.src = entry.image;
+    if (image.getAttribute('src') !== entry.image) {
+      // Clear the previous snapshot first: an <img> keeps displaying its old
+      // bitmap until the new src finishes loading, which would flash the
+      // prior link's preview. The card is hidden at this point, so the swap
+      // is invisible; until the new image arrives the placeholder shows.
+      image.removeAttribute('src');
+      image.src = entry.image;
+    }
     titleEl.textContent = entry.title || '';
     try {
       domainEl.textContent = new URL(href, window.location.origin).hostname;
@@ -119,6 +127,10 @@ export function initLinkPreviews() {
     if (currentLink === link) {
       return;
     }
+
+    // Fetch the snapshot now so it is (almost always) ready when the dwell
+    // elapses, instead of loading only once the card is already visible.
+    preloader.src = entry.image;
 
     // A different link: drop the old card at once and require a fresh dwell.
     hideCard();
